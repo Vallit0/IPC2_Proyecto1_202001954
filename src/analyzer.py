@@ -1,35 +1,19 @@
 from xml.dom import minidom
+from typing import Tuple
 import xml.dom.minidom
 from xml.dom.minidom import parse, parseString
 from models.nodes import Node, graphList
 
 
-def analyzeXML(filename):
-    patterns: list = []
+def analyzeXML(filename) -> Tuple[Tuple[list]]:
     rows: int = 0
     columns: int = 0
     flip: float = 0
     swap: float = 0
-
-    #domtree = xml.dom.minidom.parse(filename)
-    #pisosArtesanales = domtree.documentElement
-
-    #pisos = pisosArtesanales.getElementsByTagName('piso')
-    #for piso in pisos:
-       # print('========PISO=================')
-        #if piso.hasAttribute('nombre'):
-            #print('NOMBRE: {} '.format(piso.getAttribute('nombre')))
-
-
+    patterns: list = []
 
     doc = minidom.parse(filename)
-
-    #We know that there is just one pisosArtesanales Tag
-    pisosArtesanales = doc.getElementsByTagName("pisosArtesanales")
-
-
     pisos = doc.getElementsByTagName("piso")
-    #print(pisos.data)
     row = 0
     rowPatterns = 0
     for piso in pisos:
@@ -45,16 +29,16 @@ def analyzeXML(filename):
         print("Columns ->", columns.firstChild.data)
         print("FlipPrice ->", flipPrice.firstChild.data)
         print("Swap Price ->", swapPrice.firstChild.data)
-
-        patrones = doc.getElementsByTagName("patron")
         print("============ PATRONES de Piso "+str(row)+'=======')
-        for patron in patrones:
-            code = patron.getAttribute("codigo")
-            pattern = piso.getElementsByTagName("patron")[0]
-            print("Codigo", code)
-            patternAux = pattern.firstChild.data
-            patternAux = patternAux.replace(" ", "")
-            print('Patron',patternAux )
+        patrones = piso.getElementsByTagName('patron')
+
+        for i in range(len(patrones)):
+            print("----------Patron"+str(rowPatterns)+'---------')
+            print(patrones[i].getAttribute('codigo'))
+            print(patrones[i].firstChild.data.replace(" ", "").replace("\n", "").replace("\t", ""))
+            print(rowPatterns)
+
+
 
 
 
