@@ -23,7 +23,7 @@ if __name__ == '__main__':
             Tk().withdraw()  # we don't want a full GUI, so keep the root window from appearing
             filename = fd.askopenfilename(title="Select file", filetypes=(("XML Files", "*.xml"), ("All", "*.txt")))
             print(filename)
-            file = open(filename, encoding="utf8")
+            file = open(filename,encoding="utf8" )
 
             analyzeXML(file)
 
@@ -42,18 +42,7 @@ if __name__ == '__main__':
         elif op == '3':
             print("===Analizar====")
             contador: int = 0
-            # for img in lst_images:
-            # contador += 1
-            # print('{}. {}'.format(contador, img.titulo))
-            # select_img = input('Ingresa un numero: ')
-            # urrent_img = lst_images[int(select_img) - 1]
 
-            contador_2 = 0
-            print('0. NORMAL')
-            # for opt in current_img.lista_filtros:
-            #    contador_2 += 1
-            #    print('{}. {}'.format(contador_2, opt))
-            select_opt = input('Ingrese una opción: ')
 
 
 
