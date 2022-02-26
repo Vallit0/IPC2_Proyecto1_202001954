@@ -7,10 +7,10 @@
         <S>1</S>
         <patrones>
             <patron codigo="cod11">
-                WBWBWWWB1
+                WBWBWWWB
             </patron>
             <patron codigo="cod12">
-                BWBWWWWW1
+                BWBWWWWW
             </patron>
         </patrones>
     </piso>
@@ -21,10 +21,10 @@
         <S>1</S>
         <patrones>
             <patron codigo="cod21">
-                WBBBWBWWW2
+                WBBBWBWWW
             </patron>
             <patron codigo="cod22">
-                WWWWBWWWB2
+                WWWWBWWWB
             </patron>
         </patrones>
     </piso>
@@ -35,10 +35,10 @@
         <S>1</S>
         <patrones>
             <patron codigo="cod31">
-                WBBBB3
+                WBBBB
             </patron>
             <patron codigo="cod32">
-                BBBWW3
+                BBBWW
             </patron>
         </patrones>
     </piso>

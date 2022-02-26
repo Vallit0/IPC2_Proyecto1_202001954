@@ -1,48 +1,45 @@
-class Node:
-    def __init__(self, data, next, prev, nodeList):
-        self.data = data
+class designNode:
+    def __init__(self, name: str,  patron) -> None:
+        self.name: str = name
+        self.patron = patron
         self.next = None
-        self.prev = None
-        self.nodeList = None
 
 
-class graphList:
+class designList:
     def __init__(self):
         self.head = None
-        self.graphvizText = '''
-            digraph Example{
-
-        '''
-
-    def add(self, data):
-        if self.head is None:
-            nuevo_nodo = Node(data, None, None)
-            self.head = nuevo_nodo
-        else:
+        self.index = 0
+    def append(self, patron, name: str) -> None:
+        if self.head == None:
+            firstPattern = designNode(name, patron)
+            print(name  + '->', end='')
+            self.head = firstPattern
+        elif self.head != None:
             current = self.head
-            while current.next:
+            while current.next != None:
                 current = current.next
                 current.prev = current
-            current.next = Node(data, None, None)
+            newPlate = designNode(name, patron)
+            current.next = newPlate
+            print(name + '->', end='')
 
-    def print_list(self):
+    def len(self):
         n = self.head
         while n != None:
-            self.graphvizText += str(n.data)
-            print(n.data, end="->")
             n = n.next
-            if n != None:
-                self.graphvizText += "->"
+            self.index += 1
+        return self.index
 
-    def returnGraphviz(self):
-        self.graphvizText += "}"
-        return self.graphvizText
 
-    def invertir(self):
-        if self.head and self.head.next != None:
-            curr = self.head
-            while curr.next != None:
-                curr = curr.next
-            back = curr
-            newcurr = self.head
+    def insert(self):
+        pass
+
+    def delete(self):
+        pass
+
+    def pop(self):
+        pass
+
+    def move(self):
+        pass
 
