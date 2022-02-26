@@ -8,18 +8,21 @@ class matrixNode:
         self.next = next
 
 class matrix:
-    def __init__(self, rows: int , columns: int, code: str):
+    def __init__(self, rows: int , columns: int, code: str, counter: int ):
         self.head = None
         self.rows = rows
         self.columns = columns
         self.code: str = code
-        self.graphvizText = '''
-                    digraph Example{
-                      fontname="Helvetica,Arial,sans-serif"
-                      node [fontname="Helvetica,Arial,sans-serif"]
-                      edge [fontname="Helvetica,Arial,sans-serif"]
-                      a0 [label=<
- <TABLE border="10" cellspacing="10" cellpadding="10" style="rounded" bgcolor="/rdylgn11/1:/rdylgn11/11" gradientangle="315">
+        self.counter: int = counter
+        #self.graphvizText = '''
+                    #digraph Example{
+                      #fontname="Helvetica,Arial,sans-serif"
+                      #node [fontname="Helvetica,Arial,sans-serif"]
+                     # edge [fontname="Helvetica,Arial,sans-serif"]
+                      #
+        self.graphvizText = '''subgraph cluster_'''+str(self.counter)+''' {''''a' + str(self.counter) + ''' 
+        [label=<
+        <TABLE border="10" cellspacing="10" cellpadding="10" style="rounded" bgcolor="white" gradientangle="315">
 
                 '''
     def writeGraph(self):
@@ -33,15 +36,14 @@ class matrix:
                     if n.color.upper() == 'B':
                         self.graphvizText += '<TD border="3"  bgcolor="black">+'+ str(i) + str(j) + '</TD>'
                     elif n.color.upper() == 'W':
-                        self.graphvizText += '<TD border="3"  bgcolor="white">'+ str(i) + str(j) +' </TD>'
+                        self.graphvizText += '<TD border="3"  bgcolor="white">'+ str(i) + str(j) +' </TD> \n'
                     n = n.next
                 self.graphvizText += '</TR>'
 
 
     def returnGraphviz(self):
-        self.graphvizText += "}"
-        self.graphvizText += '''</TABLE>>];
-}'''
+        #self.graphvizText += "}"
+        self.graphvizText += ';</TABLE>>];  \n' + 'label = '+str(self.code) + '; }'
         return self.graphvizText
 
 

@@ -62,7 +62,7 @@ def analyzeXML(filename, listaPisos):
             print("Patron >>" + patrones[i].firstChild.data.replace(" ", "").replace("\n", "").replace("\t", ""))
             rowPatterns += 1
             print("======MATRIX=====")
-            newMatrix = matrix(rowN, column,patrones[i].getAttribute('codigo'))
+            newMatrix = matrix(rowN, column,patrones[i].getAttribute('codigo'), i)
             fillMatrix(int(rows.firstChild.data), int(columns.firstChild.data), patrones[i].firstChild.data.replace(" ", "").replace("\n", "").replace("\t", ""),newMatrix, float(flipPRICE), float(swapPRICE))
             #Anadir matriz a lista de matrices
             print("")

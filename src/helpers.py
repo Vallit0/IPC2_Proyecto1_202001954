@@ -17,12 +17,21 @@ def graph(name: str, listPisos: listaPisos):
         #pass
     head: designNode
     head = designsList.head
-    text = ''
-    filename = 'Modelos.dot'
-    outputFileName = 'modelos.svg'
+    text = '''
+                    digraph Example{
+                      fontname="Helvetica,Arial,sans-serif"
+                      node [fontname="Helvetica,Arial,sans-serif"]
+                      edge [fontname="Helvetica,Arial,sans-serif"]
+                      
+            '''
+
+    text += 'label = ' + name + ';'
+    filename = name
+    filename += '.dot'
+    outputFileName = name + '.png'
     while head != None:
-        filename: str = head.patron.code
-        outputFileName = filename
+        #filename: str = head.patron.code
+        #outputFileName = filename
         #filename += '.dot'
         #outputFileName += '.svg'
 
@@ -30,14 +39,18 @@ def graph(name: str, listPisos: listaPisos):
         text += head.patron.returnGraphviz()
         head = head.next
 
+
+    text += '}'
+    text = text.replace("+", '')
+    print(text)
     file = open(filename, 'w')
     file.write(str(text))
     file.close()
 
-    system('dot -Tsvg '+ filename + ' -o '+ outputFileName)
-    system('cd .'+ outputFileName)
-        #startfile(outputFileName)
-        head = head.next
+    system('dot -Tpng '+ filename + ' > '+ outputFileName)
+    system('cd .')
+    startfile(outputFileName)
+
 
 
 
