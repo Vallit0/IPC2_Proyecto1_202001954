@@ -6,6 +6,9 @@ class matrixNode:
         self.flip: float = flip
         self.swap: swap = swap
         self.next = next
+        self.up = None
+        self.down = None
+        self.prev = None
 
 class matrix:
     def __init__(self, rows: int , columns: int, code: str, counter: int ):
@@ -68,6 +71,23 @@ class matrix:
                 print(color + str(posX) + str(posY))
             else:
                 print(color + str(posX) + str(posY) + '->', end='')
+
+    def searchByPos(self, posY: int, posX: int):
+        current_node = self.head
+        while current_node is not None:
+            if int(current_node.posY) == int(posY) and int(current_node.posX) == int(posX):
+                return current_node
+            current_node = current_node.next
+        return None
+
+    def orthogonalNodes(self, plate: matrixNode):
+        upPlate = self.searchByPos(int(plate.posY) + 1, plate.posX)
+        downPlate = self.searchByPos(int(plate.posY) - 1, plate.posX)
+        leftPlate = self.searchByPos(int(plate.posY), plate.posX -1)
+        rightPlate = self.searchByPos(int(plate.posY), plate.posX + 1)
+
+        return upPlate, downPlate, leftPlate, rightPlate
+
 
     def insert(self):
         pass

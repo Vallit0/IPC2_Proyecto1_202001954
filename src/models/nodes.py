@@ -30,6 +30,13 @@ class designList:
             self.index += 1
         return self.index
 
+    def search(self, code):
+        current_node = self.head
+        while current_node is not None:
+            if current_node.code == code:
+                return current_node
+            current_node = current_node.next
+        return False
 
     def insert(self):
         pass
