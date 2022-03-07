@@ -33,6 +33,8 @@ if __name__ == '__main__':
             print("-----------------------------------------------------")
             print("-----------ESCRIBA EL NOMBRE DEL PISO ---------------")
             print("-----------------------------------------------------")
+            pisos.print()
+
             patternName = input(">>")
             patternName = str(patternName.replace(" ", '').replace("\n", ''))
             if pisos.isIn(patternName):

@@ -1,3 +1,4 @@
+from colorama import Fore, Back, Style
 
 class Piso:
          #Nombre, R, C, F, S, PATRONES (Sera una lista de listas)
@@ -41,7 +42,7 @@ class listaPisos:
         while current_node is not None:
             if current_node.name == name:
                 return current_node
-            current_node = current_node.next_node
+            current_node = current_node.next
         return False
         pass
     def isIn(self,name) -> bool:
@@ -49,8 +50,17 @@ class listaPisos:
         while current_node is not None:
             if current_node.name == name:
                 return True
-            current_node = current_node.next_node
+            current_node = current_node.next
         return False
+    def print(self):
+        head = self.head
+        while head != None:
+            print(Fore.BLACK)
+            print(Back.BLUE, head.name, end='->')
+            print()
+            print(Style.RESET_ALL)
+            head = head.next
+
 
 
 
