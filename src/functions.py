@@ -1,5 +1,6 @@
 from os import system, startfile
-from colorama import Fore, Back, Style
+from colorama import Fore, Back, Style, init
+init(convert=True)
 from models.piso import Piso, listaPisos
 from models.matrixNode import matrix, matrixNode
 from models.nodes import designList, designNode

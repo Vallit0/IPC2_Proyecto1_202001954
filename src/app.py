@@ -1,5 +1,6 @@
 from typing import List
-from colorama import Fore, Style, Back
+from colorama import Fore, Style, Back, init
+init(convert=True)
 from tkinter import Tk     # from tkinter import Tk for Python 3.x
 from tkinter.filedialog import askopenfilename
 from tkinter import filedialog as fd

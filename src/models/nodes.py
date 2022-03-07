@@ -1,4 +1,5 @@
 from colorama import *
+init(convert=True)
 class designNode:
     def __init__(self, name: str,  patron, code) -> None:
         self.name: str = name
