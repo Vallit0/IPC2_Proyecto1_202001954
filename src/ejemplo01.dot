@@ -1,0 +1,23 @@
+digraph Example{
+        fontname="Helvetica,Arial,sans-serif"
+        node [fontname="Helvetica,Arial,sans-serif"]
+        edge [fontname="Helvetica,Arial,sans-serif"]
+ label = ejemplo01;subgraph cluster_0 {a0 
+        [label=<
+        <TABLE border="10" cellspacing="10" cellpadding="10" style="rounded" bgcolor="white" gradientangle="315">
+
+                <TR><TD border="3"  bgcolor="white">00 </TD> 
+<TD border="3"  bgcolor="black">01</TD><TD border="3"  bgcolor="white">02 </TD> 
+<TD border="3"  bgcolor="black">03</TD></TR><TR><TD border="3"  bgcolor="white">10 </TD> 
+<TD border="3"  bgcolor="black">11</TD><TD border="3"  bgcolor="white">12 </TD> 
+<TD border="3"  bgcolor="black">13</TD></TR>;</TABLE>>];  
+label = cod11; }subgraph cluster_1 {a1 
+        [label=<
+        <TABLE border="10" cellspacing="10" cellpadding="10" style="rounded" bgcolor="white" gradientangle="315">
+
+                <TR><TD border="3"  bgcolor="black">00</TD><TD border="3"  bgcolor="white">01 </TD> 
+<TD border="3"  bgcolor="black">02</TD><TD border="3"  bgcolor="white">03 </TD> 
+</TR><TR><TD border="3"  bgcolor="black">10</TD><TD border="3"  bgcolor="white">11 </TD> 
+<TD border="3"  bgcolor="black">12</TD><TD border="3"  bgcolor="white">13 </TD> 
+</TR>;</TABLE>>];  
+label = cod12; }}

@@ -1,0 +1,16 @@
+0. Realizar un swap Q. 1.0
+Acumulado 00. Realizar un swap Q. 1.0
+Acumulado 01. Realizar un swap Q. 1.0
+Acumulado 1.00. Realizar un swap Q. 1.0
+Acumulado 00. Realizar un swap Q. 1.0
+Acumulado 01. Realizar un swap Q. 1.0
+Acumulado 1.02. Realizar un swap Q. 1.0
+Acumulado 2.00. Realizar un swap Q. 1.0
+Acumulado 00. Realizar un swap Q. 1.0
+Acumulado 01. Realizar un swap Q. 1.0
+Acumulado 1.00. Realizar un swap Q. 1.0
+Acumulado 00. Realizar un swap Q. 1.0
+Acumulado 01. Realizar un swap Q. 1.0
+Acumulado 1.02. Realizar un swap Q. 1.0
+Acumulado 2.03. Realizar un swap Q. 1.0
+Acumulado 3.0
